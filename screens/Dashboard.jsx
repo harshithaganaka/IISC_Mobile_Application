@@ -344,54 +344,6 @@ export default function Dashboard({ navigation }) { // Defines the main Dashboar
         );
     };
 
-    // const handleComplaintSubmit = async (data) => {
-    //     const formData = new FormData();
-    //     const json = {
-    //         name: data.name,
-    //         email: data.email,
-    //         phone: data.phone,
-    //         title: data.title,
-    //         enquiryType: data.enquiryType || '',
-    //     };
-    //     formData.append('json', JSON.stringify(json));
-    //     if (data.imageUri) {
-    //         const uri = Platform.OS === 'ios' ? data.imageUri.replace('file://', '') : data.imageUri;
-    //         const filename = uri.split('/').pop();
-    //         const ext = filename?.split('.').pop();
-    //         const type = ext ? `image/${ext}` : 'image/jpeg';
-
-    //         formData.append('file', {
-    //             uri,
-    //             type,
-    //             name: filename,
-    //         });
-    //     }
-    //     if (data.selectedDoc) {
-    //         formData.append('file', {
-    //             uri: selectedDoc.uri,
-    //             name: selectedDoc.name,
-    //             type: selectedDoc.type,
-    //         });
-    //     }
-
-    //     try {
-    //         const response = await axios.post(
-    //             'https://iiscapis.bridgebrilliance.com/iisc/email/compalin-email',
-    //             formData,
-    //             {
-    //                 headers: {
-    //                     'Content-Type': 'multipart/form-data',
-    //                 }
-    //             }
-    //         );
-    //         console.log("response", response?.data)
-    //         Alert.alert('Success', 'Complaint submitted successfully!');
-    //     } catch (err) {
-    //         console.error('Upload error:', err.response?.data || err.message);
-    //         Alert.alert('Error', 'Failed to submit complaint.');
-    //     }
-    // };
-
     const handleComplaintSubmit = async (data) => {
         const formData = new FormData();
 
